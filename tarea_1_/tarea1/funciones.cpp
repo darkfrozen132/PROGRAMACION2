@@ -25,12 +25,20 @@ ifstream & operator >>(ifstream& in,struct Persona& persona){
     
 }
 void menu(ofstream& out){
-    out<<setw(10)<<left<<"DNI"<<setw(10)
-    <<setw(10)<<left<<"Nombre"
-    <<setw(10)<<left<<"Peso"
-    <<setw(10)<<left<<"Talla";
+    out<<right<<setw(60)<<endl;
+    out<<left<<setw(15)<<"DNI"<<setw(15)<<"Nombre"<<setw(15)
+            <<"Peso"<<setw(15)<<"Talla"<<endl;
+    
     
 }
-ofstream & operator <<(ofstream&,const struct Persona){
+
+ofstream & operator <<(ofstream& out,const struct Persona& persona){
+    out.precision(2);
+    out<<fixed;
+    out<<left<<setw(15)<<persona.dni<<left<<setw(15)<<persona.nombre<<left<<
+            setw(15)<<persona.peso<<setw(15)<<persona.talla<<endl;
+    return out;
     
 }
+
+ 

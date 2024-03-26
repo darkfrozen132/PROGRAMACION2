@@ -28,6 +28,16 @@ int main(int argc, char** argv) {
         i++;
     }
     menu(res);
+    i=0;
+    while(1){
+        res<<personas[i];
+        i++;
+        if(personas[i].dni==0){
+            break;
+        }
+        
+        
+    }
     return 0;
 }
 

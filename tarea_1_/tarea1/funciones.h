@@ -14,7 +14,7 @@
 #define FUNCIONES_H
 
 ifstream & operator >>(ifstream&,struct Persona&);
-ofstream & operator <<(ofstream&,const struct Persona);
+ofstream & operator <<(ofstream&,const struct Persona&);
 void menu(ofstream&);
 
 
