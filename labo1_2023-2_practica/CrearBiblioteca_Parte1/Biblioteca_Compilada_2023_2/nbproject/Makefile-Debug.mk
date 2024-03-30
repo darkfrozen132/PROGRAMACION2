@@ -34,7 +34,8 @@ include Makefile
 OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES= \
+	${OBJECTDIR}/sobrecargas.o
 
 
 # C Compiler Flags
@@ -62,6 +63,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libbiblioteca_compilada_2023_2.a: ${O
 	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libbiblioteca_compilada_2023_2.a
 	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libbiblioteca_compilada_2023_2.a ${OBJECTFILES} 
 	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libbiblioteca_compilada_2023_2.a
+
+${OBJECTDIR}/sobrecargas.o: sobrecargas.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/sobrecargas.o sobrecargas.cpp
 
 # Subprojects
 .build-subprojects:

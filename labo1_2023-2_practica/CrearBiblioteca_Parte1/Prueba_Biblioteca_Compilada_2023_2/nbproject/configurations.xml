@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>AperturaDeArchivos.h</itemPath>
+      <itemPath>Estructuras.h</itemPath>
+      <itemPath>sobrecargas.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -35,8 +38,23 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>.</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>aperturadearchivosbibl</linkerLibLibItem>
+            <linkerLibLibItem>biblioteca_compilada_2023_2</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
+      <item path="AperturaDeArchivos.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Estructuras.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sobrecargas.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -59,7 +77,13 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="AperturaDeArchivos.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Estructuras.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sobrecargas.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
