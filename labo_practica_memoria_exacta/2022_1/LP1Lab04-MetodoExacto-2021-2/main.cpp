@@ -27,15 +27,17 @@ int main(int argc, char** argv) {
     CargaDeClientes (cli_DNI, cli_Nombre, cli_Categoria);
     
     ReporteDeClientes (cli_DNI, cli_Nombre, cli_Categoria);
-    /*
+    
     CargaDePedidosYProductos(cli_DNI, pro_Codigo, pro_Descripcion,
     pro_Descuento, pro_Precio, cli_CodigoProFechaPedido, cli_CantidadPedido);
+    /*
     ReporteDePedidosYProductos(cli_DNI, pro_Codigo, pro_Descripcion,
     pro_Descuento, pro_Precio, cli_CodigoProFechaPedido, cli_CantidadPedido);
     ReporteRlacionDePedidos (cli_DNI, cli_Nombre, cli_Categoria,
     cli_CodigoFechaPedido, cli_CantidadPedido, pro_Codigo,
     pro_Descripcion, pro_Descuento, pro_Precio);
-     * */
+      */
+      
     return 0;
 }
 

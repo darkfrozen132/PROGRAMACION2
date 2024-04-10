@@ -16,6 +16,11 @@
 
 void CargaDeClientes (int*&cli_DNI,char**& cli_Nombre,char*& cli_Categoria);
 void ReporteDeClientes (int*cli_DNI,char**cli_Nombre,char*cli_Categoria);
+void CargaDePedidosYProductos(int*&cli_DNI,int*& pro_Codigo,char**& pro_Descripcion,
+    double*&pro_Descuento,double*& pro_Precio,int**& cli_CodigoProFechaPedido, 
+        double**&cli_CantidadPedido);
+void colocar_producto(int*& buff_pro_Codigo,int cod,char**&buff_pro_Descripcion,char*descripcion,
+        double*&buff_pro_Descuento,double descuento,double*&buff_pro_Precio,double precio);
 
 
 
@@ -23,9 +28,11 @@ void ReporteDeClientes (int*cli_DNI,char**cli_Nombre,char*cli_Categoria);
 
 
 
-
-
-
+void colocar_valores(int*&pro_Codigo,double*&cli_cantidad_pedido,int cod,int fecha,
+                int cant,int&cantidad);
+void leer_valores_restantes(int &cant,int&dni,int&fecha,double&precio,
+        double&descuento,ifstream&archPedidos);
+int buscar_dni(int*cli_DNI,int dni);
 char* leer_cadena(ifstream&input,char c);
 char dar_categoria(char*&nombre);
 #endif /* FUNCIONES_H */
