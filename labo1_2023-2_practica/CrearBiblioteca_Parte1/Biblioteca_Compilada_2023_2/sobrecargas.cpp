@@ -95,15 +95,14 @@ bool operator +=(struct Producto*productos,struct Pedido&pedido){
         if(strcmp(productos[i].codigo,pedido.CodigoProducto)==0 ){
             if(productos[i].stock>0){
                 productos[i].clientesServidos[productos[i].cantidadClientesServidos]=pedido.dniCliente;
-                productos[i].cantidadClientesServidos++;
+                
                 productos[i].precio=pedido.precioProducto;
                 productos[i].stock--;
                 return true;
                 }
                 else{        
                 productos[i].clientesNoServidos[productos[i].cantidadClientesNoServidos]=pedido.dniCliente;
-                productos[i].cantidadClientesNoServidos++;
-                productos[i].precio=pedido.precioProducto;
+                productos[i].cantidadClientesNoServidos++;    productos[i].precio=pedido.precioProducto;
                 return false;
 
                 }

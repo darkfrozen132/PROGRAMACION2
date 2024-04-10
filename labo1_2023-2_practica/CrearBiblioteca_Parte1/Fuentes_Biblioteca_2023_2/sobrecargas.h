@@ -23,7 +23,7 @@ bool  operator >> (ifstream&,struct Pedido&);
 //Agregacion
 
 void operator +=(struct Cliente*,struct Pedido&);
-void operator +=(struct Producto*,struct Pedido&);
+bool operator +=(struct Producto*,struct Pedido&);
 
 //Impresion
 ofstream& operator <<(ofstream&,const struct Cliente&);

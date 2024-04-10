@@ -88,16 +88,18 @@ int main(int argc, char** argv) {
                 
     }
     i=0,j=0;
-    while(1){
-        producto+=pedido[i];
+    bool q;
+    while(1){   
+        q=producto+=pedido[i];
         if(pedido[i].dniCliente==0) break;
         
         i++;
-        
-         
+              
         
         
     }
+    
+    
     
     i=0;
     while(1){
