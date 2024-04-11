@@ -15,9 +15,18 @@
 #include <fstream>
 void lecturaDeProductos(char*,char***&, int*&, double*&);
 void pruebaDeLecturaDeProductos(char*,char***&, int*&, double*&);
+void lecturaDePedidos (char*,int*& fechaPedidos,char***&codigoPedidos,int***& dniCantPedidos);
+void pruebaDeLecturaDePedidos (char*,int* fechaPedidos,char***codigoPedidos,int*** dniCantPedidos);
+
+
+
+
+
+
+
+
 char** dar_codigo_nombre(char*cod,char*nombre);
 char* leer_cadena(ifstream&input,char caracter);
-void lecturaDePedidos (char*,int*& fechaPedidos,char***&codigoPedidos,int***& dniCantPedidos);
 char** colocar_codigo(char**&buff_codigoPedidos,int&cant,char*codigo);
 int**colocar_codigo(int**buffDniCantPedidos,
                     int&cant,int dni,int cantidad);
