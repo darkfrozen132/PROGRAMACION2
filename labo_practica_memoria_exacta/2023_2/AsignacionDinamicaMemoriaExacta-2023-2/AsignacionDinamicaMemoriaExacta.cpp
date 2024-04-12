@@ -130,8 +130,8 @@ void lecturaDePedidos (char*nombre_archivo,
             buff_codigoPedidos[pos]=colocar_codigo(buff_codigoPedidos[pos],
                     cant_dato_codigo[pos],codigo);
             
-            buff_dniCantPedidos[pos]=colocar_codigo(buff_dniCantPedidos[pos],
-                    cant_datos_dni_cantidad[pos],dni,cantidad);
+            buff_dniCantPedidos[cant]=colocar_codigo(buff_dniCantPedidos[cant],
+                    cant_datos_dni_cantidad[cant],dni,cantidad);
             
         }
         
@@ -142,26 +142,21 @@ void lecturaDePedidos (char*nombre_archivo,
         
                
     }
-    fechaPedidos=new int[cant+1]{};        
-        codigoPedidos=new char**[cant+1]{};
-        dniCantPedidos=new int**[cant+1]{};
-        for(int i=0;i<cant;i++){
-            fechaPedidos[i]=buff_fechapedidos[i];
-            codigoPedidos[i]=buff_codigoPedidos[i];
-            dniCantPedidos[i]=buff_dniCantPedidos[i];
-        }
-        
-   
+    fechaPedidos=new int[cant+1]{};
+    codigoPedidos=new char**[cant+1]{};
+    dniCantPedidos=new int**[cant+1]{};
+    for(int i=0;i<cant;i++){
+        //fechaPedidos[i]=
+    }
     
     
 }
 int**colocar_codigo(int**buffDniCantPedidos,
                     int&cant,int dni,int cantidad){
-    int *dnicant,*buff_dnicant[1000],**aux;
+    int *dnicant,**aux,buff_dni_cant[1000];
     dnicant=new int[2];
     dnicant[0]=dni;
     dnicant[1]=cantidad;
-   
     
     if(cant==0){
         buffDniCantPedidos[0]=new int[2];
@@ -171,25 +166,21 @@ int**colocar_codigo(int**buffDniCantPedidos,
     }
     else{
         for(int i=0;i<cant;i++){
-            buff_dnicant[i]=buffDniCantPedidos[i];                                
+            buff_dni_cant[i]=buffDniCantPedidos[i];
         }
-        buffDniCantPedidos[cant]=dnicant;
+        buff_dni_cant[cant]=dnicant;
+        cant++
     }
-    aux=new int*[cant+1]{};
-    for(int i=0;i<cant;i++){
-        aux[i]=buff_dnicant[i];
-    }
-    return aux;
+    aux= new int*[cant+1];
     
 }
 int buscar_fecha(int*arr_fecha,int fecha){
     for(int i=0;arr_fecha[i];i++){
         if(arr_fecha[i]==fecha) return i;
         
-       
+        return -1;
     
     }
-     return -1;
 }
 char** colocar_codigo(char**&buff_codigoPedidos,int&cant,char*codigo){
     char *buff_codigo[1000],**aux;
@@ -214,22 +205,6 @@ char** colocar_codigo(char**&buff_codigoPedidos,int&cant,char*codigo){
         aux[i]=buff_codigo[i];
     }
     return aux;
-    
-}
-void pruebaDeLecturaDePedidos(char*nombre_archivo,int* fechaPedidos,char***codigoPedidos,
-        int*** dniCantPedidos){
-    
-    char**aux;
-    ofstream archReportePedidos(nombre_archivo,ios::out);
-    
-    for(int i=0;fechaPedidos[i];i++){
-        archReportePedidos<<fechaPedidos[i]<<" ";
-        aux=codigoPedidos[i];
-        for(int j=0;aux[j];j++){
-            archReportePedidos<<setw(10)<<left<<aux[j]<<" ";
-        }
-        //archReportePedidos<<endl;
-    }
     
 }
 
