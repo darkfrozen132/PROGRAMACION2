@@ -25,7 +25,8 @@ void lecturaDeProductos(char*nombre_archivo,char***&productos, int*&stock,
         cod=leer_cadena(archProductos,',');
         if(archProductos.eof()) break;
         nombre=leer_cadena(archProductos,',');
-        archProductos>>prec>>aux>>stoc>>ws;  
+        archProductos>>prec>>aux>>stoc;
+        archProductos.get();
         
         buff_productos[cant]=dar_codigo_nombre(cod,nombre);
            
