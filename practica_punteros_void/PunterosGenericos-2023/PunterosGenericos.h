@@ -20,10 +20,17 @@ void cargapedidos(void*&,void*&);
 
 //funcionse adicionales
 void*leer_linea_productos(ifstream&archProductos);
+void colocar_pedidos(void*&productos,void*&clientes,int pos_producto,int pos_cliente,void*reg,int*&cantidad_ClientesxPedido);
 char*leer_cadena(ifstream&archProductos,char c);
 void*leer_linea_pedidos(ifstream&archPedidos);
 void* leer_linea_clientes(ifstream&archClientes);
 int buscar_producto(void*reg,void*&productos);
+int buscar_cliente(void*reg,void*&clientes);
+int*asignar_memoria(void*&);
+void imprimereporte(void* clientes);
+void imprimeCliente(ofstream& archReporte, void* cliente);
+void imprimeLinea(ofstream& arch, char caracter, int repeticiones);
+void imprimeReporte(void *&clientes);
 
 #endif /* PUNTEROSGENERICOS_H */
 

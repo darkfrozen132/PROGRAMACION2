@@ -18,6 +18,7 @@ using namespace std;
 
 #include "PunterosGenericos.h"
 #include "MuestraPunteros2.h"
+#include "MuestraPunteros.h"
 
 int main(int argc, char** argv) {
     void *productos,*clientes;
@@ -30,9 +31,12 @@ int main(int argc, char** argv) {
     imprimeClientes(clientes);
    
     cargapedidos(productos,clientes);
-     /*
-    imprimereporte(clientes);
-     * */
+    
+   imprimeReporte(clientes);
+   
+    
+     
 return 0;
 }
+
 
