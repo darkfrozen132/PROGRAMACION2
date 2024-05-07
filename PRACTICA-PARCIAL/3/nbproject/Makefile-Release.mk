@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/ColaConEnteros.o \
+	${OBJECTDIR}/ColaConProductos.o \
 	${OBJECTDIR}/ColaGenerica.o \
 	${OBJECTDIR}/Pregunta1.o \
 	${OBJECTDIR}/Pregunta2.o \
@@ -70,6 +71,11 @@ ${OBJECTDIR}/ColaConEnteros.o: ColaConEnteros.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ColaConEnteros.o ColaConEnteros.cpp
+
+${OBJECTDIR}/ColaConProductos.o: ColaConProductos.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ColaConProductos.o ColaConProductos.cpp
 
 ${OBJECTDIR}/ColaGenerica.o: ColaGenerica.cpp
 	${MKDIR} -p ${OBJECTDIR}

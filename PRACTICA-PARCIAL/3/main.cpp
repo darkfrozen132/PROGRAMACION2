@@ -22,7 +22,7 @@ using namespace std;
 #include "Pregunta2.h"
 
 #include "ColaConEnteros.h"
-//#include "ColaConProductos.h"
+#include "ColaConProductos.h"
 #include "ColaGenerica.h"
 int main(int argc, char** argv) {
     char**codigoDelProducto;
@@ -40,6 +40,8 @@ int main(int argc, char** argv) {
     
     mostrarEnteros(cola,imprimenumero,"reporte.txt");
 
+    procesarPedidos(fechaClienteCantidad,codigoDelProducto,productos);
+    reporteDePedidos(productos,"reportefinal.txt");
     return 0;
 }
 

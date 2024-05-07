@@ -25,14 +25,28 @@ void cargarProductos(void*&pro,char*nombre_archivo){
         productos[num-1]=reg;
         num++;
     }
-    pro=productos;
-    qsort(pro,0,num-2,compCodProducto);
+    cout<<num<<endl;
+     pro=productos;
+    qsort(productos,num-2,sizeof(void*),compCodProducto);
+    
 }
 int compCodProducto(const void*var1,const void*var2){
     void**reg1=(void**)var1;
-    void**reg2=(void**)var2;
     
-        return strcmp(    (char*)reg1[CODIGO]  ,   (char*)reg2[CODIGO]       );
+    void**registro1=(void**)reg1[0];
+    void**reg_producto1=(void**)registro1[0];
+    
+    
+    
+    void**reg2=(void**)var2;
+    void**registro2=(void**)reg2[0];
+    void**reg_producto2=(void**)registro2[0];
+    
+    char*au1,*au2;
+    au1=(char*)reg_producto1[CODIGO];
+    au2=(char*)reg_producto2[CODIGO];
+    cout<<au1<<setw(10)<<au2<<endl;
+        return strcmp(    au1 , au2     );
     
 }
 void incrementarEspacios(void**&pro,int&num,int&cap){
