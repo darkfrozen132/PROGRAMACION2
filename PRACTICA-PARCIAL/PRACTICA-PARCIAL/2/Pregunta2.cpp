@@ -27,10 +27,13 @@ void cargarProductos(void*&pro,char*nombre_archivo){
     }
     
      pro=productos;
+     cout<<pro<<endl;
    qsort(pro,num-2,sizeof(void*),compCodProducto);
+  
     
 }
 int compCodProducto(const void*var1,const void*var2){
+    
     void**reg1=(void**)var1;
     
     void**registro1=(void**)reg1[0];
@@ -45,7 +48,9 @@ int compCodProducto(const void*var1,const void*var2){
     char*au1,*au2;
     au1=(char*)reg_producto1[CODIGO];
     au2=(char*)reg_producto2[CODIGO];
-    //cout<<au1<<setw(10)<<au2<<endl;
+    double *a1=new double;
+    a1=(double*)reg_producto1[PRECIO];
+   // cout<<*a1<<setw(10)<<au2<<endl;
         return strcmp(    au1 , au2     );
     
 }
